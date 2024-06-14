@@ -13,13 +13,16 @@ const seedDB = async () => {
         const random1000 = Math.floor(Math.random() * 1000);
         const title = `${sample(descriptors)} ${sample(places)}`;
         const price = Math.floor(Math.random()*100);
-        console.log('Generated Title:', title); // Logging the generated title
+        console.log('Generated Title:', title); 
+
         const camp = new Campground({
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
-            title: title ,// Assigning the generated title
+            title: title ,
             image: 'https://source.unsplash.com/collection/483251',
+            author: '664ccc34dd6950b1b49eec49',
             description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores atque sed quisquam nihil cum sequi facere tempora nulla fuga, id aut fugit voluptatem. Itaque non assumenda neque, sit asperiores fugit!',
-            price: price
+            price: price,
+            
         });
 
         console.log('Campground Object:', camp); // Logging the campground object
